@@ -34,7 +34,7 @@ function initMap() {
           var numericMarker = L.ExtraMarkers.icon({
             icon: 'fa-number',
             number: feature.properties['id'],
-            markerColor: 'blue'
+            markerColor: 'black'
           });
           layer.setIcon(numericMarker);
 
