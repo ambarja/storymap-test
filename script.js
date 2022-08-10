@@ -45,11 +45,11 @@ function initMap() {
           });
 
           var image = $('<img>', {
-            src: feature.properties['source-link'],
+            src: feature.properties['source.link'],
           });
 
           var source = $('<a>', {
-            text: feature.properties['source-credit'],
+            text: feature.properties['source.credit'],
             href: feature.properties['image'],
             target: "_blank",
             class: 'source'
