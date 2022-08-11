@@ -18,9 +18,6 @@ const references = `
   </div>
 `
 
-
-
-
 function initMap() {
 
   // This creates the Leaflet map with a generic start point, because code at bottom automatically fits bounds to all markers
@@ -84,9 +81,18 @@ function initMap() {
             class: 'img-holder'
           });
 
+          var video = $('<video width="320" height="240" controls></video>', {
+          });
+
+          var sourcevideo = $('<source>', {
+            src: feature.properties['video'],
+          });
+
+          video.append(sourcevideo);
           imgHolder.append(image);
 
-          container.append(chapter).append(imgHolder).append(source).append(description);
+
+          container.append(chapter).append(imgHolder).append(source).append(description).append(video);
           $('#contents').append(container);
 
           var i;
