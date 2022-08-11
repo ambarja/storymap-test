@@ -179,8 +179,11 @@ h3 {
 
 h5{
     padding-left: 10px;
+    padding-top: 10px;
     margin-top: 10px;
     margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 
