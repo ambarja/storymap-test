@@ -123,6 +123,7 @@ h3 {
     text-align: left;
     font-size: 11pt;
     padding: 20px;
+    padding-bottom: 0px;
 }
 
 .inFocus {
