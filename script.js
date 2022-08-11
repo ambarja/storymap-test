@@ -10,7 +10,7 @@ $('div#contents').scroll(function() {
 // References: 
 
 const references = ` 
-  <div class='#'>
+  <div class='reference'>
    <h5>References:</h5>
    <ul><li><p class="reference">- Matesanz Nogales, A. (2009). Datos para la adaptación castellana de la Escala de Temores (FSS), Análisis y modificación de conducta, 35(152), 67-94.</p></li></ul>
    <ul><li><p class="reference">- Pérez de la Dehesa, R. (1969). La editorial Sempere en Hispanoamérica y España. Revista Iberoamericana, XXXV(69), 551-555.</p></li></ul>
