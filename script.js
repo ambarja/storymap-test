@@ -12,9 +12,9 @@ $('div#contents').scroll(function() {
 const references = ` 
   <div class='reference'>
    <h5><u>References:</u></h5>
-   <ul><li><p class="reference">- Matesanz Nogales, A. (2009). Datos para la adaptación castellana de la Escala de Temores (FSS), Análisis y modificación de conducta, 35(152), 67-94.</p></li></ul>
-   <ul><li><p class="reference">- Pérez de la Dehesa, R. (1969). La editorial Sempere en Hispanoamérica y España. Revista Iberoamericana, XXXV(69), 551-555.</p></li></ul>
-   <ul style="padding-bottom: 10px;"><li><p class="reference">- Strachota, S. (2020). Generalizaing in teh context of an early algebra intervention. Infancia y aprendizaje, 43(2), 347-394.</p></li></ul>
+   <ul><li><p class="reference">Matesanz Nogales, A. (2009). Datos para la adaptación castellana de la Escala de Temores (FSS), Análisis y modificación de conducta, 35(152), 67-94.</p></li></ul>
+   <ul><li><p class="reference">Pérez de la Dehesa, R. (1969). La editorial Sempere en Hispanoamérica y España. Revista Iberoamericana, XXXV(69), 551-555.</p></li></ul>
+   <ul style="padding-bottom: 10px;"><li><p class="reference">Strachota, S. (2020). Generalizaing in teh context of an early algebra intervention. Infancia y aprendizaje, 43(2), 347-394.</p></li></ul>
   </div>
 `
 
