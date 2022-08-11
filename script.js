@@ -80,21 +80,23 @@ function initMap() {
           var imgHolder = $('<div></div', {
             class: 'img-holder'
           });
-
-          var video = $('<video width="320" height="240" controls></video>', {
-          });
-
-          var sourcevideo = $('<source>', {
-            src: feature.properties['video'],
-          });
-
-          video.append(sourcevideo);
           imgHolder.append(image);
 
-
-          container.append(chapter).append(imgHolder).append(source).append(description).append(video);
-          $('#contents').append(container);
-
+          
+          if(feature.properties['video'] < 1){
+            container.append(chapter).append(imgHolder).append(source).append(description);
+            $('#contents').append(container);
+          }else{
+            var video = $('<video width="320" height="240" controls></video>', {
+            });
+            var sourcevideo = $('<source>', {
+              src: feature.properties['video'],
+            });
+            video.append(sourcevideo);
+            container.append(chapter).append(imgHolder).append(source).append(description).append(video);
+            $('#contents').append(container);
+          }
+          
           var i;
           var areaTop = -100;
           var areaBottom = 0;
