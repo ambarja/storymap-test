@@ -166,3 +166,31 @@ h3 {
 #container1{
     margin-top: 170px;
 }   
+
+#contents .space-at-the-bottom{
+    height: 40px;
+    padding-top: 0px;
+}
+
+.reference{
+ font-size: 10px; 
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+
+h5{
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 9px;
+}
+
+
+ul {
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+}
+
+
+
+

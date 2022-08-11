@@ -6,6 +6,21 @@ $('div#contents').scroll(function() {
   scrollPosition = $(this).scrollTop();
 });
 
+
+// References: 
+
+const references = ` 
+  <div class='#'>
+   <h5>References:</h5>
+   <ul><li><p class="reference">- Matesanz Nogales, A. (2009). Datos para la adaptación castellana de la Escala de Temores (FSS), Análisis y modificación de conducta, 35(152), 67-94.</p></li></ul>
+   <ul><li><p class="reference">- Pérez de la Dehesa, R. (1969). La editorial Sempere en Hispanoamérica y España. Revista Iberoamericana, XXXV(69), 551-555.</p></li></ul>
+   <ul><li><p class="reference">- Strachota, S. (2020). Generalizaing in teh context of an early algebra intervention. Infancia y aprendizaje, 43(2), 347-394.</p></li></ul>
+  </div>
+`
+
+
+
+
 function initMap() {
 
   // This creates the Leaflet map with a generic start point, because code at bottom automatically fits bounds to all markers
@@ -105,6 +120,7 @@ function initMap() {
 
     $('div#container1').addClass("inFocus");
     $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
+    $('#contents').append(references);
     map.fitBounds(geojson.getBounds());
     geojson.addTo(map);
   });
