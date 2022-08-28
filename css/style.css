@@ -200,4 +200,9 @@ reference-p{
     margin-bottom: 0px;
 }
 
-
+.intro{
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+}

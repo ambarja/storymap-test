@@ -7,11 +7,30 @@ $('div#contents').scroll(function() {
 });
 
 
+// Introduction: 
+const introduction = `
+<h3 style="font-weight:lighter;font-family: 'Roboto Slab', serif;font-size: 120%;"><i class='fa fa-file-text-o'></i> Introduction</h3>
+<p class="intro">
+Ayacucho, city, south-central Peru.
+It lies in a fertile valley on the eastern slopes of the Andean Cordillera Occidental
+at an elevation of 9,007 feet (2,746 metres) above sea level and has a pleasant
+and invigorating climate.
+Ayacucho was founded in 1539 by the conquistador Francisco Pizarro and called Huamanga until 1825.
+Its present name comes from the surrounding plain of Ayacucho (a Quechua word meaning “corner of the dead”),
+ where revolutionaries defeated royalist forces in 1824 and secured Peru’s independence from Spain.
+ Many colonial buildings survive in the city.
+ The seat of an archbishopric, it has a 17th-century cathedral and
+ many churches and is known for its Holy Week celebrations.
+ The National University of San Cristóbal de Huamanga (founded 1677, closed 1886, reopened 1959)
+ is located there.
+ </p>
+`
+
 // References: 
 
 const references = ` 
   <div class='reference'>
-   <h5><u>References:</u></h5>
+   <h5><u><i class='fa fa-book'></i> References:</u></h5>
    <ul><li><p class="reference">Matesanz Nogales, A. (2009). Datos para la adaptación castellana de la Escala de Temores (FSS), Análisis y modificación de conducta, 35(152), 67-94.</p></li></ul>
    <ul><li><p class="reference">Pérez de la Dehesa, R. (1969). La editorial Sempere en Hispanoamérica y España. Revista Iberoamericana, XXXV(69), 551-555.</p></li></ul>
    <ul><li><p class="reference" style="margin-bottom: 100px;">Strachota, S. (2020). Generalizaing in teh context of an early algebra intervention. Infancia y aprendizaje, 43(2), 347-394.</p></li></ul>
@@ -34,7 +53,7 @@ function initMap() {
 
   // This customizes link to view source code; add your own GitHub repository
   map.attributionControl
-  .setPrefix('View <a href="http://github.com/jackdougherty/leaflet-storymap" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+  .setPrefix('Created with <a href="http://leafletjs.com" title="A JS library for interactive maps"><strong>Leaflet</a></strong>');
 
   // This loads the GeoJSON map data file from a local folder
   $.getJSON('StoryMap.geojson', function(data) {
@@ -52,10 +71,11 @@ function initMap() {
 
           // This creates the contents of each chapter from the GeoJSON data. Unwanted items can be removed, and new ones can be added
           var chapter = $('<p></p>', {
-            text: feature.properties['chapter'],
+            text:feature.properties['chapter'],
             class: 'chapter-header'
           });
 
+          
           var image = $('<img>', {
             src: feature.properties['source.link'],
           });
@@ -82,7 +102,7 @@ function initMap() {
           });
           imgHolder.append(image);
 
-          
+          // Conditional for add videos in story map -----------------------------------------------
           if(feature.properties['video'] < 1){
             container.append(chapter).append(imgHolder).append(source).append(description);
             $('#contents').append(container);
@@ -97,11 +117,20 @@ function initMap() {
             $('#contents').append(container);
           }
           
+          // Conditional for add introduction in story map --------------------------------------------
+          if(feature.properties['id']==1){
+            container.append(introduction).append(chapter).append(imgHolder).append(source).append(description).append(video);
+            $('#contents').append(container);
+          }else{
+            container.append(chapter).append(imgHolder).append(source).append(description).append(video);
+            $('#contents').append(container);
+          }
+
           var i;
           var areaTop = -100;
           var areaBottom = 0;
 
-          // Calculating total height of blocks above active
+          // Calculating total height of blocks above active --------------------------------------------
           for (i = 1; i < feature.properties['id']; i++) {
             areaTop += $('div#container' + i).height() + imageContainerMargin;
           }
@@ -117,7 +146,7 @@ function initMap() {
             }
           });
 
-          // Make markers clickable
+          // Make markers clickable ----------------------------------------------------------------------
           layer.on('click', function() {
             $("div#contents").animate({scrollTop: areaTop + "px"});
           });
@@ -127,7 +156,7 @@ function initMap() {
     });
 
     $('div#container1').addClass("inFocus");
-    $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
+    $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-circle-up'></i></br><small>Top</small></a></div>");
     $('#contents').append(references);
     map.fitBounds(geojson.getBounds());
     geojson.addTo(map);
