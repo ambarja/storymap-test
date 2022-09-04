@@ -6,7 +6,6 @@ $('div#contents').scroll(function() {
   scrollPosition = $(this).scrollTop();
 });
 
-
 // Introduction: 
 const introduction = `
 <h3 style="font-weight:lighter;font-family: 'Roboto Slab', serif;font-size: 120%;"><i class='fa fa-file-text-o'></i> Introduction</h3>
