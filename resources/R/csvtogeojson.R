@@ -8,4 +8,3 @@ geojson_write(
   data,
   file = "StoryMap.geojson"
   )
-
