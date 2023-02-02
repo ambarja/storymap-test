@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- meta basic -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+  <meta name="description" content="Mapping violence The Lucanamarca case (Ayacucho-Perú) ..."/>
+  <meta name="keywords" content="Mapping violence,Lucanamarca,Ayacucho"/>
+  <meta name="author" content="Diana Morovejo and Antony Barja" />
+  <meta name="copyright" content="Diana Morovejo and Antony Barja"/>
+  <meta name="robots" content="index,follow" />
+  <!-- MS, fb & Whatsapp --> 
+  <!-- MS Tile - for Microsoft apps-->
+  <meta name="msapplication-TileImage" content="http://www.example.com/image01.jpg">    
+  <!-- fb & Whatsapp -->
+  <!-- Site Name, Title, and Description to be displayed -->
+  <meta property="og:site_name" content="Diana Morovejo">
+  <meta property="og:title" content="Mapping violence The Lucanamarca case (Ayacucho-Perú)">
+  <meta property="og:description" content="Mapping violence The Lucanamarca case (Ayacucho-Perú)">
+
+  <!-- Image to display -->
+  <!-- Replace   «example.com/image01.jpg» with your own -->
+  <meta property="og:image" content="https://raw.githubusercontent.com/ambarja/storymap-test/main/logo/logo.png">
+
+  <!-- No need to change anything here -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image:type" content="https://raw.githubusercontent.com/ambarja/storymap-test/main/logo/logo.png">
+
+  <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300">
+
+  <!-- Website to visit when clicked in fb or WhatsApp-->
+  <meta property="og:url" content="https://ambarja.github.io/storymap-test/">
+
+  <title>leaflet-storymap</title>
+  <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+  <!-- load jQuery  -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+    integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <!-- load Font-Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <!-- Load leaflet.extra-markers from local directory -->
+  <script src="./markers/leaflet.extra-markers.min.js"></script>
+  <link rel="stylesheet" href="./markers/leaflet.extra-markers.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div id="title" class="title-text">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" width="10%" style="margin-top:10px"/>
+    <h2 style="margin-top: 0px;">Mapping violence<br>The Lucanamarca case<br>(Ayacucho-Perú)</h2>
+    <small>Scroll <i class='fa fa-chevron-circle-down'></i></small>
+  </div>
+  <div id="narration">
+    <div id="contents">
+      <div id="space-at-the-top" class="space-at-the-top"></div>
+    </div>
+  </div>
+  <div id="map"></div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
